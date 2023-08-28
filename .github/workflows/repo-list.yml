@@ -16,7 +16,7 @@ jobs:
       with:
         enterprise: Ramboll
         outputFilename: repositories.json
-        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       
     - name: Save the repos
       run: |
