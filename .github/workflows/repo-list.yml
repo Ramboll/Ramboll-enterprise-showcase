@@ -16,7 +16,7 @@ jobs:
       with:
         enterprise: Ramboll
         outputFilename: repositories.json
-        GITHUB_TOKEN: ${{secrets.GH_EA_TOKEN}}
+        token: ${{secrets.GH_EA_TOKEN}}
     - name: Save the repos
       run: |
           git config user.name github-actions
