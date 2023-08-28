@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron:  '0 * * * *' # Every hour
-
-env:
-    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}   
   
 jobs:
   repo-list:
@@ -19,7 +16,7 @@ jobs:
       with:
         enterprise: Ramboll
         outputFilename: repositories.json
-#        token: ${{secrets.GITHUB_TOKEN}}
+        token: ${{secrets.GH_EA_TOKEN}}
     - name: Save the repos
       run: |
           git config user.name github-actions
