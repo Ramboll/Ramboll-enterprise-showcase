@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron:  '0 * * * *' # Every hour
+
+env:
+    GITHUB_TOKEN: ${{secrets.GH_EA_TOKEN}}   
   
 jobs:
   repo-list:
